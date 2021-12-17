@@ -30,7 +30,7 @@ function Checkout() {
           ))}
         </div>
       )}
-      <div className="checkout__right">
+      <div className={basket?.length > 0 ? "checkout__right" : ""}>
         <Subtotal />
       </div>
     </div>

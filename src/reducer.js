@@ -14,8 +14,7 @@ function reducer(state, action) {
     case REMOVE_FROM_BASKET:
       let newBasket = [...state.basket];
       const index = state.basket.findIndex((item) => item.id === action.id);
-      index > 0 ? newBasket.splice(index, 1) : console.warn("not possible");
-      console.log(newBasket);
+      index >= 0 ? newBasket.splice(index, 1) : console.warn("not possible");
       return { ...state, basket: newBasket };
     default:
       return state;
